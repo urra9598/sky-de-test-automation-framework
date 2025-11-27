@@ -1,0 +1,20 @@
+{
+  "environment": "prod",
+  "test_timeout": 600,
+  "log_level": "INFO",
+  "report_format": ["html", "json"],
+  "data_formats": ["json", "csv", "xml"],
+  "enable_screenshots": false,
+  "retry_count": 5,
+  "api": {
+    "base_url": "https://api.production.com",
+    "timeout": 60,
+    "retries": 5
+  },
+  "database": {
+    "host": "prod-db.example.com",
+    "port": 5432,
+    "name": "production_db",
+    "user": "prod_user"
+  }
+}

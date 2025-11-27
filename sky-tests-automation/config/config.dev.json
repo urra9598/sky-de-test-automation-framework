@@ -1,0 +1,22 @@
+{
+  "environment": "dev",
+  "test_timeout": 300,
+  "log_level": "DEBUG",
+  "report_format": ["html", "json"],
+  "data_formats": ["json", "csv", "xml"],
+  "enable_screenshots": true,
+  "retry_count": 3,
+  "test_data_dir": "sky-tests-automation/test-data",
+  "expected_results_dir": "sky-tests-automation/expected-results",
+  "api": {
+    "base_url": "http://localhost:8080",
+    "timeout": 30,
+    "retries": 3
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "test_db",
+    "user": "test_user"
+  }
+}

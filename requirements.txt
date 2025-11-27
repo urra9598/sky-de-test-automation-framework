@@ -1,0 +1,28 @@
+# Sky Test Automation Framework Requirements
+
+# Core testing framework
+pytest==7.4.3
+pytest-html==4.1.1
+pytest-timeout==2.1.1
+
+# JSON schema validation (optional, for advanced use)
+jsonschema==4.20.0
+
+# Data processing (optional)
+pandas==2.1.4  # For advanced CSV/data manipulation
+
+# Reporting (optional)
+Jinja2==3.1.2  # For custom HTML report templates
+
+# Development tools
+black==23.12.1          # Code formatting
+flake8==6.1.0          # Linting
+pyflakes==3.1.0        # Static code analysis
+mypy==1.7.1            # Type checking
+pylint==3.0.3          # Code analysis
+
+# PyCharm compatibility
+# (No special requirements - all packages are PyCharm compatible)
+
+# Google Cloud BigQuery client
+google-cloud-bigquery>=3.10.0

@@ -1,0 +1,40 @@
+{
+  "test_case": "schema_check",
+  "schema_file": "/Users/urra9598/Documents/VisualStudioCode/sky-de-test-automation-framework/sky-tests-automation/test-scripts/schema_check/customer_schema.json",
+  "num_records": 5,
+  "passed": 5,
+  "failed": 0,
+  "total_duration_seconds": 0.001,
+  "results": [
+    {
+      "index": 0,
+      "valid": true,
+      "errors": [],
+      "duration_seconds": 0.0
+    },
+    {
+      "index": 1,
+      "valid": true,
+      "errors": [],
+      "duration_seconds": 0.0
+    },
+    {
+      "index": 2,
+      "valid": true,
+      "errors": [],
+      "duration_seconds": 0.0
+    },
+    {
+      "index": 3,
+      "valid": true,
+      "errors": [],
+      "duration_seconds": 0.0
+    },
+    {
+      "index": 4,
+      "valid": true,
+      "errors": [],
+      "duration_seconds": 0.0
+    }
+  ]
+}

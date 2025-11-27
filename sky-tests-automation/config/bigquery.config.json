@@ -1,0 +1,7 @@
+{
+  "project": "your-gcp-project-id",
+  "credentials_file": "", 
+  "use_default_credentials": true,
+  "default_dataset": "your_dataset",
+  "location": "US"
+}

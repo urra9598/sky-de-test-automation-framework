@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "customers",
+  "type": "object",
+  "required": [
+    "customer_number",
+    "account_sid",
+    "source_system"
+  ],
+  "properties": {
+    "customer_number": {"type": "string"},
+    "account_sid": {"type": "string"},
+    "source_system": {"type": "string"},
+    "source_system_det": {"type": "string"},
+    "css_des_customer_status": {"type": "string"},
+    "birthdate": {"type": "string", "format": "date"},
+    "salutation": {"type": "string"},
+    "firstname": {"type": "string"},
+    "lastname": {"type": "string"},
+    "country": {"type": "string"},
+    "postal_code": {"type": "string"},
+    "city": {"type": "string"},
+    "street": {"type": "string"},
+    "add_des_house_number": {"type": "string"}
+  }
+}
