@@ -5,34 +5,32 @@ A comprehensive, production-ready **Python-based test automation framework** wit
 
 ## ✨ Quick Overview
 
-This framework provides **7 core utility classes** for:
-- ✅ Configuration management (multi-environment)
-- ✅ Test logging with execution reports
-- ✅ Multi-format data comparison (JSON, CSV, XML)
-- ✅ Advanced data validation (7 rule types)
-- ✅ Test categorization with JIRA tracking
-- ✅ Professional report generation (HTML, JSON)
-- ✅ Intelligent test data generation
+This framework consists the following utility classes:
+- Configuration management (multi-environment)
+- Test logging with execution reports
+- Multi-format data comparison (JSON, CSV, XML)
+- Advanced data validation (7 rule types)
+- Test categorization with JIRA tracking
+- Professional report generation (HTML, JSON)
+- Intelligent test data generation
 
-## 🎯 Key Features
+## Key Features
 
 | Feature | Details |
 |---------|---------|
-| **7 Core Utilities** | ConfigManager, LoggerManager, DataComparator, DataValidator, TestMarker, ReportGenerator, DataMocker |
-| **50+ Methods** | Comprehensive functionality across all utilities |
+| **Utilities** | ConfigManager, LoggerManager, DataComparator, DataValidator, TestMarker, ReportGenerator, DataMocker |
 | **Multi-Format Support** | JSON, CSV, XML data comparison and validation |
 | **JIRA Integration** | Track tests with JIRA IDs and run by marker |
 | **Environment Config** | Dev/Prod configuration management |
 | **Report Generation** | Professional HTML and JSON reports |
-| **Data Validation** | Null check, type, schema, conditional, range, enum, pattern |
 | **Test Categorization** | Smoke, regression, sanity, integration, unit |
 | **PyCharm Ready** | Full IDE integration and support |
 
-## 📦 What's Included
+## Framework Structure
 
 ```
 sky-tests-automation/
-├── utilities/              ← 7 core utility classes (~1,450 lines)
+├── utilities/              ← Utility classes
 │   ├── config_manager.py
 │   ├── logger_manager.py
 │   ├── data_comparator.py
@@ -43,24 +41,24 @@ sky-tests-automation/
 ├── config/                 ← Environment-specific configs
 │   ├── config.dev.json
 │   └── config.prod.json
-├── test-scripts/           ← Your test cases
+├── test-scripts/           ← Test cases
 │   └── example_test_user_registration.py
 └── reports/                ← Generated logs & reports
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Create Test Case
+### 2. Create Test Case - Automatic tests generator
 ```bash
 python GenerateTestCaseFolder.py my_test_case
 ```
 
-### 3. Write Test Using Utilities
+### 3. Write Tests Using Utilities
 ```python
 from utilities.markers import TestMarker
 from utilities.logger_manager import LoggerManager
@@ -99,21 +97,7 @@ pytest -v -m smoke
 Location: sky-tests-automation/reports/test_report_*.html
 ```
 
-## 📚 Documentation
-
-Start with **`INDEX.md`** for navigation guide to all documentation.
-
-| Document | Purpose |
-|----------|---------|
-| **INDEX.md** | 📍 Navigation guide - START HERE |
-| **GETTING_STARTED.md** | Setup and quick start (10 min read) |
-| **QUICK_REFERENCE.md** | Code snippets and commands |
-| **UTILITIES_GUIDE.md** | Detailed documentation for each utility |
-| **ARCHITECTURE.md** | System design and diagrams |
-| **FRAMEWORK_SUMMARY.md** | Requirements verification |
-| **DELIVERY_SUMMARY.md** | Project completion overview |
-
-## 🔧 7 Core Utilities
+## Documentation
 
 ### 1. ConfigManager
 ```python
@@ -156,20 +140,8 @@ report_gen.generate_html_report()
 data = DataMocker.generate_data_from_template(template)
 ```
 
-## ✅ All 10 Requirements Implemented
 
-✅ Utilities and Tests in different folders
-✅ Configurations for general setup
-✅ Expected results & logs with comparison
-✅ Null check, schema, conditional fields
-✅ Per-test-case folder structure
-✅ Python and PyCharm only
-✅ Organization standards
-✅ Reports and full execution logs
-✅ Markers for JIRA IDs
-✅ Data Mocker for test data
-
-## 💡 Common Commands
+## Sample Commands
 
 ```bash
 # Install dependencies
@@ -191,39 +163,11 @@ pytest -k "SKY-1234"
 pytest --html=report.html --self-contained-html
 ```
 
-## 🎓 Learning Path (30 minutes)
 
-1. Install: `pip install -r requirements.txt` (1 min)
-2. Read: `GETTING_STARTED.md` (10 min)
-3. Review: `ARCHITECTURE.md` (10 min)
-4. Study: `example_test_user_registration.py` (5 min)
-5. Try: `pytest -v` (4 min)
+## Get Started
 
-## 📊 Framework Statistics
-
-- **Utility Classes**: 7
-- **Core Methods**: 50+
-- **Utility Code**: ~1,450 lines
-- **Documentation**: ~1,500 lines
-- **Total Implementation**: ~2,950 lines
-
-## 🔐 Production Ready
-
-✅ All 10 requirements implemented
-✅ Comprehensive documentation
-✅ Example test provided
-✅ Best practices applied
-✅ Enterprise-grade utilities
-
-## 🚀 Get Started
-
-1. **Read**: `INDEX.md` (navigation guide)
+1. **Read**: `README.md` (navigation guide)
 2. **Install**: `pip install -r requirements.txt`
 3. **Learn**: `GETTING_STARTED.md`
 4. **Create**: `python GenerateTestCaseFolder.py first_test`
 5. **Run**: `pytest -v -m smoke`
-
----
-
-**Happy Testing! 🎉**
-*Production Ready - November 15, 2025*
