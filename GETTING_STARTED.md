@@ -1,12 +1,5 @@
 # Sky Test Automation Framework - Complete Utility Suite
 
-## 📋 Overview
-
-I've created a comprehensive test automation framework with **7 core utility classes** that address all your requirements. The framework is production-ready and follows industry best practices.
-
----
-
-## 🎯 Core Utilities Created
 
 ### 1. **ConfigManager** (`utilities/config_manager.py`)
 **Purpose**: Centralized configuration and environment management
@@ -14,19 +7,10 @@ I've created a comprehensive test automation framework with **7 core utility cla
 **Features**:
 - Singleton pattern for single instance
 - Loads environment-specific JSON configs
-- Supports dot notation for nested keys (`api.base_url`)
 - Environment variable support via `TEST_ENV`
 - Runtime configuration updates
 - Config reloading
 
-**Example**:
-```python
-from utilities.config_manager import config
-
-env = config.get('environment')
-api_url = config.get('api.base_url')
-config.set('custom_key', 'value')
-```
 
 ---
 
@@ -44,17 +28,6 @@ config.set('custom_key', 'value')
 **Output Location**: `reports/latest_execution_logs/{test_name}/`
 **Files**: `execution_*.log`, `execution_report_*.json`
 
-**Example**:
-```python
-from utilities.logger_manager import LoggerManager
-
-logger_mgr = LoggerManager('test_case_name')
-logger = logger_mgr.logger
-
-logger.info('Test started')
-logger_mgr.log_result(expected, actual, errors)
-logger_mgr.save_execution_report(status='PASSED')
-```
 
 ---
 
@@ -71,19 +44,6 @@ logger_mgr.save_execution_report(status='PASSED')
 
 **Supported Formats**: JSON, CSV, XML, XSD
 
-**Example**:
-```python
-from utilities.data_comparator import DataComparator
-
-# Compare JSON
-is_equal, differences = DataComparator.compare_json(expected, actual)
-
-# Compare files
-is_equal, differences = DataComparator.compare_files('expected.json', 'actual.json')
-
-# Validate against schema
-is_valid, errors = DataComparator.validate_schema(data, schema)
-```
 
 ---
 
@@ -100,29 +60,6 @@ is_valid, errors = DataComparator.validate_schema(data, schema)
 - **Custom Validators**: User-defined validation functions
 - **Batch Validation**: Apply multiple rules at once
 
-**Example**:
-```python
-from utilities.validator import DataValidator
-
-data = {'email': 'test@example.com', 'age': 25, 'status': 'active'}
-
-# Null check
-errors = DataValidator.validate_not_null(data, ['email', 'age'])
-
-# Conditional: if status='active', registration_date must exist
-errors = DataValidator.validate_conditional(
-    data, 'status', 'active', ['registration_date']
-)
-
-# All rules at once
-rules = {
-    'not_null': ['email'],
-    'patterns': {'email': r'^[\w\.-]+@[\w\.-]+\.\w+$'},
-    'ranges': {'age': (18, 100)},
-    'enums': {'status': ['active', 'inactive']}
-}
-is_valid, all_errors = DataValidator.validate_all(data, rules)
-```
 
 ---
 
@@ -131,29 +68,11 @@ is_valid, all_errors = DataValidator.validate_all(data, rules)
 
 **Features**:
 - **Test Categories**: smoke, regression, sanity, integration, unit
-- **JIRA Tracking**: Tag tests with JIRA IDs (e.g., SKY-1234)
+- **JIRA Tracking**: Tag tests with JIRA IDs (e.g., JIRA-1234)
 - **Combined Markers**: Multiple markers on single test
 - **Parametrization**: Data-driven test support
 - **Skip/XFail**: Skip or mark tests as expected to fail
 - **Custom Markers**: Extensible marker system
-
-**Example**:
-```python
-from utilities.markers import TestMarker
-
-class TestMyFeature:
-    @TestMarker.jira('SKY-1234')
-    @TestMarker.smoke()
-    def test_login(self):
-        pass
-    
-    @TestMarker.parametrize('email,expected', [
-        ('valid@test.com', True),
-        ('invalid-email', False)
-    ])
-    def test_email_validation(self, email, expected):
-        pass
-```
 
 **Run by Marker**:
 ```bash
@@ -161,6 +80,7 @@ pytest -m smoke              # Run smoke tests
 pytest -m "jira and smoke"   # Run JIRA-tracked smoke tests
 pytest -k "SKY-1234"         # Run specific JIRA ID
 ```
+
 
 ---
 
@@ -177,24 +97,6 @@ pytest -k "SKY-1234"         # Run specific JIRA ID
 
 **Output Location**: `reports/test_report_{timestamp}.{html|json}`
 
-**Example**:
-```python
-from utilities.report_generator import ReportGenerator
-
-report_gen = ReportGenerator()
-
-report_gen.add_test_result(
-    test_name='test_login',
-    status='PASSED',
-    duration=2.5,
-    expected={'result': 'success'},
-    actual={'result': 'success'},
-    jira_id='SKY-1234'
-)
-
-report_gen.generate_html_report()
-report_gen.generate_json_report()
-```
 
 ---
 
@@ -210,25 +112,6 @@ report_gen.generate_json_report()
 - Batch data generation
 - Custom field generators
 
-**Example**:
-```python
-from utilities.data_mocker import DataMocker
-
-# Generate single record
-template = {
-    'email': {'type': 'email'},
-    'age': {'type': 'number', 'min': 18, 'max': 65},
-    'status': {'type': 'enum', 'values': ['active', 'inactive']},
-    'created_date': {'type': 'date'}
-}
-user_data = DataMocker.generate_data_from_template(template)
-
-# Generate batch
-batch = DataMocker.generate_batch_data(template, count=10)
-
-# Generate from JSON schema
-data = DataMocker.generate_from_json_schema('schema.json')
-```
 
 ---
 
@@ -247,13 +130,13 @@ sky-tests-automation/
 │
 ├── utilities/
 │   ├── __init__.py
-│   ├── config_manager.py      ✅ Configuration management
-│   ├── logger_manager.py      ✅ Test logging & reports
-│   ├── data_comparator.py     ✅ Multi-format comparison
-│   ├── validator.py           ✅ Data validation
-│   ├── markers.py             ✅ Pytest markers + JIRA
-│   ├── report_generator.py    ✅ Report generation
-│   └── data_mocker.py         ✅ Test data generation
+│   ├── config_manager.py      # Configuration management
+│   ├── logger_manager.py      # Test logging & reports
+│   ├── data_comparator.py     # Multi-format comparison
+│   ├── validator.py           # Data validation
+│   ├── markers.py             # Pytest markers + JIRA
+│   ├── report_generator.py    # Report generation
+│   └── data_mocker.py         # Test data generation
 │
 └── reports/
     ├── latest_execution_logs/ # Test logs (recreated each run)
@@ -263,33 +146,8 @@ sky-tests-automation/
 
 ---
 
-## ✅ Requirements Checklist
 
-| # | Requirement | Status | Implementation |
-|---|---|---|---|
-| 1 | Utilities & Tests in different folders | ✅ | `utilities/` vs `test-scripts/` |
-| 2 | Configurations in separate folder | ✅ | `config/` with env-specific files |
-| 3 | Expected results & logs with comparison | ✅ | LoggerManager + DataComparator |
-| 4 | Null check, schema, conditional fields | ✅ | DataValidator with all checks |
-| 5 | Per-test folder structure | ✅ | LoggerManager creates per-test logs |
-| 6 | Python & PyCharm only | ✅ | Pure Python, pytest native |
-| 7 | Organization standards | ✅ | Type hints, docstrings, patterns |
-| 8 | Reports in framework folder | ✅ | `reports/` with HTML & JSON |
-| 9 | JIRA markers for test tags | ✅ | TestMarker with JIRA support |
-| 10 | Data Mocker for test data | ✅ | DataMocker with templates |
-
----
-
-## 📚 Documentation Files
-
-1. **`FRAMEWORK_SUMMARY.md`** - Complete framework overview with all requirements
-2. **`UTILITIES_GUIDE.md`** - Detailed usage guide for each utility
-3. **`pytest.ini`** - Pytest configuration with markers
-4. **`example_test_user_registration.py`** - Complete example using all utilities
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Install Dependencies
 ```bash
@@ -370,27 +228,16 @@ export CONFIG_DIR=sky-tests-automation/config
 
 ---
 
-## 💡 Key Features
+##  Key Features
 
-✅ **Modular Design** - Independent, reusable utilities
-✅ **Comprehensive Logging** - File + console with structured output
-✅ **Multi-Format Support** - JSON, CSV, XML comparison
-✅ **Data Validation** - Null, type, schema, conditional, range, enum, pattern
-✅ **Test Categorization** - Markers with JIRA tracking
-✅ **Report Generation** - HTML & JSON with statistics
-✅ **Data Generation** - Template-based mock data (LLM-ready)
-✅ **PyCharm Native** - Full IDE support
-✅ **Best Practices** - Type hints, docstrings, patterns
-✅ **Extensible** - Easy to add new validators, comparators, markers
+ **Modular Design** - Independent, reusable utilities
+ **Comprehensive Logging** - File + console with structured output
+ **Multi-Format Support** - JSON, CSV, XML comparison
+ **Data Validation** - Null, type, schema, conditional, range, enum, pattern
+ **Test Categorization** - Markers with JIRA tracking
+ **Report Generation** - HTML & JSON with statistics
+ **Data Generation** - Template-based mock data
+ **PyCharm Native** - Full IDE support
+ **Best Practices** - Type hints, docstrings, patterns
+ **Extensible** - Easy to add new validators, comparators, markers
 
----
-
-## 📞 Next Steps
-
-1. **Review** `FRAMEWORK_SUMMARY.md` and `UTILITIES_GUIDE.md`
-2. **Study** `example_test_user_registration.py` for complete usage
-3. **Create** your first test case with `GenerateTestCaseFolder.py`
-4. **Run** tests with pytest markers
-5. **Check** reports in `reports/` folder
-
-All utilities are production-ready and follow industry best practices! 🎉
