@@ -1,0 +1,409 @@
+{
+  "execution_summary": {
+    "total_tests": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "pass_percentage": 100.0,
+    "total_duration_seconds": 0.0,
+    "execution_timestamp": "2025-11-27T17:02:46.405896"
+  },
+  "generated_at": "2025-11-27T17:02:46.405898",
+  "test_results": [
+    {
+      "test_name": "schema_check_record_0",
+      "status": "PASSED",
+      "duration": 0.0001717080012895167,
+      "expected": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "customers",
+        "type": "object",
+        "required": [
+          "customer_number",
+          "account_sid",
+          "source_system"
+        ],
+        "properties": {
+          "customer_number": {
+            "type": "string"
+          },
+          "account_sid": {
+            "type": "string"
+          },
+          "source_system": {
+            "type": "string"
+          },
+          "source_system_det": {
+            "type": "string"
+          },
+          "css_des_customer_status": {
+            "type": "string"
+          },
+          "birthdate": {
+            "type": "string",
+            "format": "date"
+          },
+          "salutation": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postal_code": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "add_des_house_number": {
+            "type": "string"
+          }
+        }
+      },
+      "actual": {
+        "customer_number": "jujMirwARQ",
+        "account_sid": "KdZUhgJSci",
+        "source_system": "ybkUNeTnum",
+        "source_system_det": "ZOPBLoQNjd",
+        "css_des_customer_status": "DaJJMvHpMg",
+        "birthdate": "VvMrdEJGqO",
+        "salutation": "VQgGfbayAm",
+        "firstname": "ESVUCkuZJf",
+        "lastname": "pKQrdMcwwR",
+        "country": "rYrxASQCzt",
+        "postal_code": "iDdqdbmAjW",
+        "city": "dFhUUiKWSn",
+        "street": "kluErXhSpQ",
+        "add_des_house_number": "QDsqJHpFTq"
+      },
+      "errors": [],
+      "jira_id": null,
+      "timestamp": "2025-11-27T17:02:46.404701"
+    },
+    {
+      "test_name": "schema_check_record_1",
+      "status": "PASSED",
+      "duration": 0.00016774999676272273,
+      "expected": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "customers",
+        "type": "object",
+        "required": [
+          "customer_number",
+          "account_sid",
+          "source_system"
+        ],
+        "properties": {
+          "customer_number": {
+            "type": "string"
+          },
+          "account_sid": {
+            "type": "string"
+          },
+          "source_system": {
+            "type": "string"
+          },
+          "source_system_det": {
+            "type": "string"
+          },
+          "css_des_customer_status": {
+            "type": "string"
+          },
+          "birthdate": {
+            "type": "string",
+            "format": "date"
+          },
+          "salutation": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postal_code": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "add_des_house_number": {
+            "type": "string"
+          }
+        }
+      },
+      "actual": {
+        "customer_number": "fwbTNxdPEx",
+        "account_sid": "RhhRVapotm",
+        "source_system": "CVEKIyCHBn",
+        "source_system_det": "RioQfZAtFz",
+        "css_des_customer_status": "trUiCoCQlw",
+        "birthdate": "NBSDypvZQS",
+        "salutation": "EmssNWwuzf",
+        "firstname": "uqsLuqRuDH",
+        "lastname": "NBKafefrJJ",
+        "country": "olEZiVihzt",
+        "postal_code": "RzQNocHNUU",
+        "city": "JgnAtCPdwO",
+        "street": "uyPNbtZSXe",
+        "add_des_house_number": "QytuLoTiVr"
+      },
+      "errors": [],
+      "jira_id": null,
+      "timestamp": "2025-11-27T17:02:46.404889"
+    },
+    {
+      "test_name": "schema_check_record_2",
+      "status": "PASSED",
+      "duration": 0.0001617909874767065,
+      "expected": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "customers",
+        "type": "object",
+        "required": [
+          "customer_number",
+          "account_sid",
+          "source_system"
+        ],
+        "properties": {
+          "customer_number": {
+            "type": "string"
+          },
+          "account_sid": {
+            "type": "string"
+          },
+          "source_system": {
+            "type": "string"
+          },
+          "source_system_det": {
+            "type": "string"
+          },
+          "css_des_customer_status": {
+            "type": "string"
+          },
+          "birthdate": {
+            "type": "string",
+            "format": "date"
+          },
+          "salutation": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postal_code": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "add_des_house_number": {
+            "type": "string"
+          }
+        }
+      },
+      "actual": {
+        "customer_number": "STGfSjTepp",
+        "account_sid": "VVAqOBdfcx",
+        "source_system": "iAGzekujEh",
+        "source_system_det": "kvwNLTdgOP",
+        "css_des_customer_status": "gHPCKDnBje",
+        "birthdate": "BVdwjZyuRr",
+        "salutation": "MFvIcEUBzk",
+        "firstname": "hAeZarNwLw",
+        "lastname": "IHRpQHqaGv",
+        "country": "TAmStMefZa",
+        "postal_code": "YOubsTjCXD",
+        "city": "IhkYmRevGt",
+        "street": "gdnnqvcQLQ",
+        "add_des_house_number": "fhBiHgqeWL"
+      },
+      "errors": [],
+      "jira_id": null,
+      "timestamp": "2025-11-27T17:02:46.405065"
+    },
+    {
+      "test_name": "schema_check_record_3",
+      "status": "PASSED",
+      "duration": 0.00014250000822357833,
+      "expected": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "customers",
+        "type": "object",
+        "required": [
+          "customer_number",
+          "account_sid",
+          "source_system"
+        ],
+        "properties": {
+          "customer_number": {
+            "type": "string"
+          },
+          "account_sid": {
+            "type": "string"
+          },
+          "source_system": {
+            "type": "string"
+          },
+          "source_system_det": {
+            "type": "string"
+          },
+          "css_des_customer_status": {
+            "type": "string"
+          },
+          "birthdate": {
+            "type": "string",
+            "format": "date"
+          },
+          "salutation": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postal_code": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "add_des_house_number": {
+            "type": "string"
+          }
+        }
+      },
+      "actual": {
+        "customer_number": "UtgxFFKeoR",
+        "account_sid": "aqcJwsMKOn",
+        "source_system": "HGmlyCrchW",
+        "source_system_det": "EUWjDeXNuj",
+        "css_des_customer_status": "aLTSLGqonL",
+        "birthdate": "XHgXuvXNNX",
+        "salutation": "lFsZNoDnuj",
+        "firstname": "EWUHIGQzMu",
+        "lastname": "MAIQoRcbuB",
+        "country": "ZsBtvsWsnx",
+        "postal_code": "pLHempRlpp",
+        "city": "NnScpqXubG",
+        "street": "kECEpZyuRu",
+        "add_des_house_number": "WUpPsOPcwD"
+      },
+      "errors": [],
+      "jira_id": null,
+      "timestamp": "2025-11-27T17:02:46.405216"
+    },
+    {
+      "test_name": "schema_check_record_4",
+      "status": "PASSED",
+      "duration": 0.00012658300693146884,
+      "expected": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "customers",
+        "type": "object",
+        "required": [
+          "customer_number",
+          "account_sid",
+          "source_system"
+        ],
+        "properties": {
+          "customer_number": {
+            "type": "string"
+          },
+          "account_sid": {
+            "type": "string"
+          },
+          "source_system": {
+            "type": "string"
+          },
+          "source_system_det": {
+            "type": "string"
+          },
+          "css_des_customer_status": {
+            "type": "string"
+          },
+          "birthdate": {
+            "type": "string",
+            "format": "date"
+          },
+          "salutation": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "postal_code": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "add_des_house_number": {
+            "type": "string"
+          }
+        }
+      },
+      "actual": {
+        "customer_number": "kCodYXBwaU",
+        "account_sid": "LHknrRvjUH",
+        "source_system": "xaheJkhQOv",
+        "source_system_det": "pNVLvGWzYx",
+        "css_des_customer_status": "cgbtyLVWak",
+        "birthdate": "FaNGPpQyIk",
+        "salutation": "UplbGkhHCF",
+        "firstname": "bjCovypGTq",
+        "lastname": "bDDBBBAbMy",
+        "country": "ZLUnwvttJi",
+        "postal_code": "spMqwUttac",
+        "city": "pJcyUSKWsm",
+        "street": "umvpctbrOj",
+        "add_des_house_number": "UFCavvZqWl"
+      },
+      "errors": [],
+      "jira_id": null,
+      "timestamp": "2025-11-27T17:02:46.405350"
+    }
+  ]
+}

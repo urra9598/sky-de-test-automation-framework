@@ -1,7 +1,7 @@
 {
-  "project": "your-gcp-project-id",
+  "project": "de-dp-gr-pr-dev-test",
   "credentials_file": "", 
   "use_default_credentials": true,
-  "default_dataset": "your_dataset",
+  "default_dataset": "Urekha",
   "location": "US"
 }

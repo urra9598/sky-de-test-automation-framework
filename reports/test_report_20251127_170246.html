@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Execution Report</title>
+    <style>
+        * { font-family: Arial, sans-serif; }
+        body { margin: 20px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #333; border-bottom: 3px solid #007bff; padding-bottom: 10px; }
+        .summary { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin: 20px 0; }
+        .summary-card { padding: 15px; border-radius: 5px; text-align: center; color: white; }
+        .total { background-color: #5a6c7d; }
+        .passed { background-color: #28a745; }
+        .failed { background-color: #dc3545; }
+        .skipped { background-color: #ffc107; color: #333; }
+        .duration { background-color: #17a2b8; }
+        .summary-card h3 { margin: 0 0 10px 0; font-size: 14px; }
+        .summary-card .value { font-size: 24px; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { background-color: #007bff; color: white; padding: 12px; text-align: left; }
+        td { padding: 10px; border-bottom: 1px solid #ddd; }
+        tr:hover { background-color: #f5f5f5; }
+        .status-passed { color: #28a745; font-weight: bold; }
+        .status-failed { color: #dc3545; font-weight: bold; }
+        .status-skipped { color: #ffc107; font-weight: bold; }
+        .errors { background-color: #f8d7da; padding: 10px; border-radius: 3px; color: #721c24; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Execution Report</h1>
+        
+        <div class="summary">
+            <div class="summary-card total">
+                <h3>Total Tests</h3>
+                <div class="value">5</div>
+            </div>
+            <div class="summary-card passed">
+                <h3>Passed</h3>
+                <div class="value">5</div>
+            </div>
+            <div class="summary-card failed">
+                <h3>Failed</h3>
+                <div class="value">0</div>
+            </div>
+            <div class="summary-card skipped">
+                <h3>Skipped</h3>
+                <div class="value">0</div>
+            </div>
+            <div class="summary-card duration">
+                <h3>Duration (s)</h3>
+                <div class="value">0.0</div>
+            </div>
+        </div>
+
+        <p><strong>Pass Rate:</strong> 100.0%</p>
+        <p><strong>Generated:</strong> 2025-11-27T17:02:46.406454</p>
+
+        <h2>Test Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Test Name</th>
+                    <th>Status</th>
+                    <th>Duration (s)</th>
+                    <th>JIRA ID</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>schema_check_record_0</td>
+                    <td><span class='status-passed'>PASSED</span></td>
+                    <td>0.00</td>
+                    <td>None</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>schema_check_record_1</td>
+                    <td><span class='status-passed'>PASSED</span></td>
+                    <td>0.00</td>
+                    <td>None</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>schema_check_record_2</td>
+                    <td><span class='status-passed'>PASSED</span></td>
+                    <td>0.00</td>
+                    <td>None</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>schema_check_record_3</td>
+                    <td><span class='status-passed'>PASSED</span></td>
+                    <td>0.00</td>
+                    <td>None</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>schema_check_record_4</td>
+                    <td><span class='status-passed'>PASSED</span></td>
+                    <td>0.00</td>
+                    <td>None</td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
